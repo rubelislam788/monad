@@ -1,46 +1,40 @@
-# NFT Staking Demo (Monad-Compatible)
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>NFT Staking Demo (Monad-Compatible)</title>
+</head>
+<body style="font-family:Arial; line-height:1.6; padding:30px; max-width:800px; margin:auto;">
+  <h2>NFT Staking Demo (Monad-Compatible)</h2>
+  <p>This is a full demo project for NFT staking and point earning on Monad chain.</p>
 
-This is a full demo project for NFT staking and point earning on Monad chain.
+  <h3>📦 Components</h3>
+  <ul>
+    <li><strong>Smart Contract (Solidity):</strong> Stake NFT - Claim points based on rarity - 5-minute claim cooldown</li>
+    <li><strong>Frontend (React + Vite + Ethers.js):</strong> Wallet Connect - Stake/Unstake buttons - Claim Points - Display rarity and earning rate</li>
+  </ul>
 
-## 🧱 Components
+  <h3>🚀 How to Run</h3>
+  <ol>
+    <li>Smart Contract Deploy: <code>NFTStaking.sol</code> on Remix or Hardhat (Monad EVM-compatible environment). Set <code>setRarityRate(tokenId, rate)</code> after minting NFT.</li>
+    <li>Frontend:<br>
+      <code>cd frontend</code><br>
+      <code>npm install</code><br>
+      <code>npm run dev</code><br>
+      Open in browser: <a href="http://localhost:5173" target="_blank">http://localhost:5173</a><br>
+      Then, replace <code>'CONTRACT_ADDRESS'</code> inside <code>App.jsx</code> with your deployed contract address.
+    </li>
+  </ol>
 
-- **Smart Contract (Solidity):**
-  - Stake NFT
-  - Claim points based on rarity
-  - 5-minute claim cooldown
+  <h3>👑 Rarity Point Rates (per hour):</h3>
+  <ul>
+    <li>Common: 100</li>
+    <li>Uncommon: 200</li>
+    <li>Rare: 600</li>
+    <li>Epic: 700</li>
+    <li>Legendary: 1000</li>
+  </ul>
 
-- **Frontend (React + Vite + Ethers.js):**
-  - Wallet Connect
-  - Stake/Unstake buttons
-  - Claim Points
-  - Display rarity and earning rate
-
-## 🚀 How to Run
-
-### 1. Smart Contract
-
-Deploy `NFTStaking.sol` on Remix or Hardhat (Monad EVM-compatible environment). Set `setRarityRate(tokenId, rate)` after minting NFT.
-
-### 2. Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open in browser: [http://localhost:5173](http://localhost:5173)
-
-Then, replace `CONTRACT_ADDRESS` inside `App.jsx` with your deployed contract address.
-
-## 🏆 Rarity Point Rates (/hour)
-
-- Common: 100
-- Uncommon: 200
-- Rare: 600
-- Epic: 700
-- Legendary: 1000
-
-## ⚠️ Note
-
-- This is a demo. In production, you would use real NFT metadata, backend points, and proper signature verifications.
+  <p><strong>Note:</strong> This is a demo. In production, you would use real NFT metadata, backend points, and proper signature verifications.</p>
+</body>
+</html>
